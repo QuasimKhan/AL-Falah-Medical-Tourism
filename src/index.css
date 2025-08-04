@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+
+
+/* Completely hide Google Translate top banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Remove margin added by the translate bar */
+body {
+  top: 0px !important;
+}
+
+/* Optional: Hide small tooltip popups */
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
