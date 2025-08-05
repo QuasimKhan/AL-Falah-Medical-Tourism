@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // If using React Router
-import Button from './Button';
+import Button from '../Button';
 
 const WhoAreWeCard = () => {
   const navigate = useNavigate(); // For navigation

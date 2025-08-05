@@ -71,7 +71,7 @@ export default function Navbar() {
             <button className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full hover:bg-yellow-300 transition font-semibold shadow-md">
               Book Appointment
             </button>
-            <LanguageSelector />
+            {/* <LanguageSelector /> */}
           </div>
 
           {/* Mobile Menu Button */}
