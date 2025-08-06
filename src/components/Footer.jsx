@@ -23,7 +23,7 @@ const Footer = () => {
             <p className="text-sm text-gray-500 mt-2">
               Email:{" "}
               <a
-                href="https://mail.google.com/mail/?view=cm&to=alfalahmedicaltourism@gmail.com&su=Medical+Tourism+Inquiry&body=Hello+Al-Falah+Team%2C%0D%0A%0D%0AI+am+interested+in+your+medical+tourism+services.+Please+provide+me+with+more+information.%0D%0A%0D%0ARegards%2C%0D%0A%5BYour+Name%5D"
+                href="mailto:alfalahmedicaltourism@gmail.com&su=Medical+Tourism+Inquiry&body=Hello+Al-Falah+Team%2C%0D%0A%0D%0AI+am+interested+in+your+medical+tourism+services.+Please+provide+me+with+more+information.%0D%0A%0D%0ARegards%2C%0D%0A%5BYour+Name%5D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
@@ -47,7 +47,7 @@ const Footer = () => {
                 <FaFacebookF size={18} />
               </a>
               <a
-                href="https://mail.google.com/mail/?view=cm&to=alfalahmedicaltourism@gmail.com"
+            href= "mailto:alfalahmedicaltourism@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-orange-500 transition"
