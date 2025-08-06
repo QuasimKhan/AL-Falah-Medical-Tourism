@@ -23,10 +23,11 @@ const Footer = () => {
             <p className="text-sm text-gray-500 mt-2">
               Email:{" "}
               <a
-                href="mailto:alfalahmedicaltourism@gmail.com&su=Medical+Tourism+Inquiry&body=Hello+Al-Falah+Team%2C%0D%0A%0D%0AI+am+interested+in+your+medical+tourism+services.+Please+provide+me+with+more+information.%0D%0A%0D%0ARegards%2C%0D%0A%5BYour+Name%5D"
+            href= "mailto:alfalahmedicaltourism@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="text-blue-600 hover:text-orange-500 transition"
+                aria-label="Email"
               >
                 alfalahmedicaltourism@gmail.com
               </a>
