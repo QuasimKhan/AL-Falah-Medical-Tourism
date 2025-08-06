@@ -2,12 +2,12 @@ import React from 'react';
 import Crousels from '../components/Crousels';
 import WhoAreWeCard from '../components/cards/WhoAreWeCard';
 import FacebookEmbed from '../components/FacebookPageEmbeded';
-import UserCard from '../components/cards/UserCard';
-import { Interpreters } from '../data/Interpreters';
+import UserCard from '../components/cards/interpreterCard';
+import { InterpretersData } from '../data/InterpretersData';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const topThreeInterpreters = Interpreters.slice(0, 3); // ✅ Only first 3
+  const topThreeInterpreters = InterpretersData.slice(0, 3); // ✅ Only first 3
 
   return (
     <>

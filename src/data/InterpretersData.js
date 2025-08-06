@@ -1,4 +1,4 @@
-export const Interpreters = [
+export const InterpretersData = [
     {
         id: 1,
         name: "Sarfaraz Ahmad",
@@ -43,17 +43,31 @@ export const Interpreters = [
     },
     {
         id: 4,
-        name: "Jane Smith",
-        img: "/images/interpreters/jane.jpg",
-        languages: ["English", "French"],
+        name: "Quasim Khan",
+        img: "/images/interpreters/quasim.jpg",
+        languages: ["Russian", "English", "Urdu", "Hindi"],
         expertise: "Medical, Tourism",
-        experience: "5 years",
+        experience: "1 year",
         qualifications: "Certified Medical Interpreter",
         designation: "Junior Interpreter",
-        nationality: "French",
+        nationality: "Indian",
         bio: "Jane is a junior medical interpreter with a passion for helping patients navigate healthcare systems. She is fluent in English and French.",
-        contact: "+33 123-456-7890",
-        email: "bRt0X@example.com",
+        contact: "+91 9794094606",
+        email: "quasimkhanpersonal@gmail.com",
+    },
+    {
+        id: 5,
+        name: "Quasim Khan",
+        img: "/images/interpreters/quasim.jpg",
+        languages: ["Russian", "English", "Urdu", "Hindi"],
+        expertise: "Medical, Tourism",
+        experience: "1 year",
+        qualifications: "Certified Medical Interpreter",
+        designation: "Junior Interpreter",
+        nationality: "Indian",
+        bio: "Jane is a junior medical interpreter with a passion for helping patients navigate healthcare systems. She is fluent in English and French.",
+        contact: "+91 9794094606",
+        email: "quasimkhanpersonal@gmail.com",
     },
     
 ]

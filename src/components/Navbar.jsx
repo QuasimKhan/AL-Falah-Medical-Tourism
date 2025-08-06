@@ -1,11 +1,18 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
+import Button from "./Button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  // const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const menuRef = useRef(null);
+
+  const handleAppointment = () => {
+    navigate("/appointment");
+    setIsOpen(false); // close on mobile
+  };
 
   const pages = [
     { name: "Home", link: "/" },
@@ -16,69 +23,72 @@ export default function Navbar() {
     { name: "Contact Us", link: "/contact" },
   ];
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 10);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+  const isActive = (path) => location.pathname === path;
 
-  // useEffect(() => {
-  //   setIsOpen(false); // Close mobile menu when route changes
-  // }, [location]);
+  // Close menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
-  const isActive = (path)=> {
-    return location.pathname === path;
-  }
+  // Close when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
-    <nav
-      className={`h-20 fixed top-0 left-0 w-full z-50 font-inter  bg-white shadow-md text-gray-900`}
-    >
+    <nav className="h-20 fixed top-0 left-0 w-full z-50 font-inter bg-white shadow-md text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
-              src="/images/logo.png"
-              alt="logo"
-              className="w-16 sm:w-20 md:w-24 lg:w-24 xl:w-28 object-contain"
-            />
+            <Link to={"/"}>
+              <img
+                src="/images/logo.png"
+                alt="logo"
+                className="w-16 sm:w-20 md:w-24 lg:w-24 xl:w-28 object-contain"
+              />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center md:space-x-4 text-lg font-medium">
-            {pages.map((key) => {
-              return (
-                <Link
-                  key={key.name}
-                  to={key.link}
-                  className={`px-4 py-2 rounded-md transition font-medium ${
-                    isActive(key.link)
-                      ? "bg-yellow-400 text-gray-900"
-                      : "text-gray-900 hover:bg-yellow-400 hover:text-gray-900"
-                  }`}
-                >
-                  {key.name}
-                </Link>
-              );
-            })}
+            {pages.map((key) => (
+              <Link
+                key={key.name}
+                to={key.link}
+                className={`px-4 py-2 rounded-md transition font-medium ${
+                  isActive(key.link)
+                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                    : "hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
+                }`}
+              >
+                {key.name}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Button */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full hover:bg-yellow-300 transition font-semibold shadow-md">
-              Book Appointment
-            </button>
-            {/* <LanguageSelector /> */}
+            <Button onClick={handleAppointment}>Book Appointment</Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`focus:outline-none text-gray-900`}
+              className="focus:outline-none text-gray-900"
             >
               {isOpen ? (
                 <svg
@@ -116,26 +126,33 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 space-y-3 flex flex-col justify-center items-center bg-white shadow-md">
-          {pages.map((key) => {
-            return (
-              <Link
-                key={key.name}
-                to={key.link}
-                className={`block px-4 py-2 rounded-md w-full text-center transition font-medium ${
-                  isActive(key.link)
-                    ? "bg-yellow-400 text-gray-900"
-                    : "text-gray-800 hover:bg-yellow-400 hover:text-gray-900"
-                }`}
-              >
-                {key.name}
-              </Link>
-            );
-          })}
-          <button className="w-full bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300 transition font-semibold">
+        <div
+          ref={menuRef}
+          className="md:hidden px-4 pt-2 pb-4 space-y-3 flex flex-col justify-center items-center bg-white shadow-md"
+        >
+          {pages.map((key) => (
+            <Link
+              key={key.name}
+              to={key.link}
+              onClick={() => setIsOpen(false)}
+              className={`block px-4 py-2 rounded-md w-full text-center transition font-medium ${
+                isActive(key.link)
+                  ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                  : "text-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
+              }`}
+            >
+              {key.name}
+            </Link>
+          ))}
+
+          <button
+            className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition font-semibold"
+            onClick={handleAppointment}
+          >
             Book Appointment
           </button>
-          <LanguageSelector />
+
+          {/* <LanguageSelector /> */}
         </div>
       )}
     </nav>
