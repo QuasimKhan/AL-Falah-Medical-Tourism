@@ -4,7 +4,7 @@ import LanguageSelector from "./LanguageSelector";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-//   const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const pages = [
@@ -16,17 +16,17 @@ export default function Navbar() {
     { name: "Contact Us", link: "/contact" },
   ];
 
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 10);
-//     };
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 10);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  useEffect(() => {
-    setIsOpen(false); // Close mobile menu when route changes
-  }, [location]);
+  // useEffect(() => {
+  //   setIsOpen(false); // Close mobile menu when route changes
+  // }, [location]);
 
   const isActive = (path)=> {
     return location.pathname === path;
@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`h-20 fixed top-0 left-0 w-full z-50 font-inter bg-white shadow-md text-gray-900`}
+      className={`h-20 fixed top-0 left-0 w-full z-50 font-inter  bg-white shadow-md text-gray-900`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
