@@ -13,7 +13,7 @@ export default function Card(props) {
         {/* Image */}
         <div className="relative w-full h-48 bg-gray-100 overflow-hidden">
           <img
-            src={props.img}
+            src={props.img || "/images/interpreters/interpreter-dummy.png"}
             alt={props.name}
             className="w-full h-full object-contain p-2"
           />

@@ -11,7 +11,7 @@ export default function DoctorCard(props) {
         {/* Image */}
         <div className="relative w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">
           <img
-            src={props.img}
+            src={props.img || "/images/doctors/doctor-dummy.png"}
             alt={props.name}
             className="w-auto h-full object-contain p-3"
           />
@@ -22,12 +22,12 @@ export default function DoctorCard(props) {
           <div className="space-y-1">
             <h2 className="text-lg font-semibold text-center text-gray-800">{props.name}</h2>
             <p className="text-center text-sm text-cyan-700">{props.designation}</p>
-            <p className="text-center text-xs text-gray-500">{props.specialization}</p>
+            <p className="text-center text-xs text-gray-500 ">{props.specialization}</p>
 
             <div className="text-sm text-gray-600 space-y-1 mt-2">
                 <p className="flex items-center gap-2">
                     <FaUserMd className="text-blue-600" />
-                    <span><strong>Qualifications:</strong> {props.qualifications}</span>
+                    <span className="truncate"><strong>Qualifications:</strong> {props.qualifications}</span>
                 </p>
               <p className="flex items-center gap-2">
                 <FaRegClock className="text-orange-600" />

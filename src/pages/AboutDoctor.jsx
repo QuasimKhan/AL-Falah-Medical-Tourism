@@ -25,7 +25,7 @@ const AboutDoctor = () => {
       {/* Left: Doctor Image */}
       <div className="bg-white shadow-xl rounded-3xl overflow-hidden w-1/2 md:w-1/3 p-4">
         <img
-          src={doctor.img}
+          src={doctor.img || "/images/doctors/doctor-dummy.png"}
           alt={doctor.name}
           className="rounded-2xl w-full object-cover"
         />
