@@ -47,7 +47,7 @@ const LanguageSelector = () => {
     <div ref={containerRef} className="relative ml-4">
       <button
         onClick={() => setShow((prev) => !prev)}
-        className="flex items-center px-3 py-2 bg-gray-200 rounded-full hover:bg-yellow-300 transition text-gray-800 text-sm font-medium"
+        className="flex items-center px-3 py-2 bg-gray-200 rounded-full hover:bg-gradient-to-r from-orange-500 to-red-500 hover:text-white text-gray-800 text-sm font-medium"
       >
         <FaGlobe className="mr-1" /> Language
       </button>

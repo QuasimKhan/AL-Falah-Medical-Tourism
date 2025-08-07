@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaEnvelope } from "react-icons/fa";
+import LanguageSelector from "./LanguageSelector";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,12 +11,28 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto px-4 grid gap-6 sm:grid-cols-3 text-center sm:text-left">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-orange-500">
+            <Link to="/" className="text-xl font-bold text-cyan-800">
               AL-Falah Medical Tourism
-            </h3>
-            <p className="text-sm text-gray-500 mt-2">
+            </Link>
+            <p className="text-sm text-orange-500 mt-2">
               Your Global Partner in Medical Tourism.
             </p>
+          </div>
+
+          {/* About */}
+          <div>
+            <h4 className="font-semibold text-gray-700">About Us</h4>
+            <p className="text-sm text-gray-500 mt-2">
+              Al-Falah Medical Tourism – Complete healthcare travel services for
+              patients worldwide. Treatment coordination, hospital booking, visa
+              help, 6-language translation & full assistance from arrival to
+              departure.
+            </p>
+          </div>
+          {/* Languages */}
+          <div className="flex flex-col items-center gap-2 sm:items-start text-center sm:text-left">
+            <h4 className="font-semibold text-gray-700">Languages</h4>
+            <LanguageSelector />
           </div>
 
           {/* Contact Info */}
@@ -23,7 +41,7 @@ const Footer = () => {
             <p className="text-sm text-gray-500 mt-2">
               Email:{" "}
               <a
-            href= "mailto:alfalahmedicaltourism@gmail.com"
+                href="mailto:alfalahmedicaltourism@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-orange-500 transition"
@@ -48,7 +66,7 @@ const Footer = () => {
                 <FaFacebookF size={18} />
               </a>
               <a
-            href= "mailto:alfalahmedicaltourism@gmail.com"
+                href="mailto:alfalahmedicaltourism@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-orange-500 transition"
@@ -63,8 +81,8 @@ const Footer = () => {
         {/* Bottom Strip */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-center text-sm text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} AL-Falah Medical Tourism. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} AL-Falah Medical Tourism. All
+            rights reserved.
           </p>
           <p className="mt-1">
             Designed by{" "}

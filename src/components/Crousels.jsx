@@ -16,6 +16,11 @@ const slides = [
     heading: "Trusted by Thousands",
     description: "Your health, our mission—every step of the way.",
   },
+  {
+    src: "/images/img5.jpg",
+    heading: "Affordable Packages",
+    description: "Quality healthcare without breaking the bank.",
+  },
 ];
 
 export default function Carousels() {
