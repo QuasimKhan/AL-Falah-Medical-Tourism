@@ -2,10 +2,33 @@ import React from 'react';
 import { InterpretersData } from '../data/InterpretersData';
 import UserCard from '../components/cards/interpreterCard';
 import { FaUserMd } from 'react-icons/fa'; // 👨‍⚕️ Icon for doctors/interpreters
+import { Helmet } from 'react-helmet-async';
 
 const Interpreters = () => {
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Expert Medical Interpreters - AL-Falah Medical Tourism</title>
+        <meta
+          name="description"
+          content="Meet our expert medical interpreters fluent in multiple languages dedicated to making your healthcare journey seamless at AL-Falah Medical Tourism."
+        />
+        <meta
+          name="keywords"
+          content="medical interpreters, healthcare interpreters, language interpreters, AL-Falah Medical Tourism, multilingual healthcare support"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://yourdomain.com/interpreters" />
+        {/* Add Open Graph tags for social sharing */}
+        <meta property="og:title" content="Expert Medical Interpreters - AL-Falah Medical Tourism" />
+        <meta
+          property="og:description"
+          content="Our interpreters provide multilingual support to help you navigate your medical journey with ease."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/interpreters" />
+        <meta property="og:image" content="https://yourdomain.com/your-image.jpg" />
+      </Helmet>
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-100 -z-10"></div>
 
