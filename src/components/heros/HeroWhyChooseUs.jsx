@@ -55,7 +55,7 @@ const services = [
 
 const HeroWhyChooseUs = () => {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       {/* Decorative SVG background (optional) */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-orange-100 opacity-50 z-0" />
 

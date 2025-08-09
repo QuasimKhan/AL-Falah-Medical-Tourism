@@ -16,11 +16,12 @@ export default function Navbar() {
 
   const pages = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/about" },
-    { name: "Interpreters", link: "/interpreters" },
     { name: "Doctors", link: "/doctors" },
-    { name: "Hospitals", link: "/hospitals" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "Treatments", link: "/treatments" },
+    { name: "Services", link: "/services" },
+    { name: "About", link: "/about" },
+    { name: "Interpreters", link: "/interpreters" },
+    { name: "Contact", link: "/contact" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -85,76 +86,71 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="focus:outline-none text-gray-900"
-            >
-              {isOpen ? (
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-7 h-7"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
+<div className="md:hidden" ref={menuRef}>
+  <button
+    onClick={() => setIsOpen(prev => !prev)}
+    className="focus:outline-none text-gray-900"
+  >
+    {isOpen ? (
+      <svg
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    ) : (
+      <svg
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    )}
+  </button>
+
+  {/* Mobile Menu */}
+  {isOpen && (
+    <div className="px-4 pt-2 pb-4 space-y-3 flex flex-col justify-center items-center bg-white shadow-md absolute left-0 w-full top-20 z-40">
+      {pages.map((key) => (
+        <Link
+          key={key.name}
+          to={key.link}
+          onClick={() => setIsOpen(false)}
+          className={`block px-4 py-2 rounded-md w-full text-center transition font-medium ${
+            isActive(key.link)
+              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+              : "text-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
+          }`}
+        >
+          {key.name}
+        </Link>
+      ))}
+
+      <button
+        className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition font-semibold"
+        onClick={handleAppointment}
+      >
+        Book Appointment
+      </button>
+    </div>
+  )}
+</div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div
-          ref={menuRef}
-          className="md:hidden px-4 pt-2 pb-4 space-y-3 flex flex-col justify-center items-center bg-white shadow-md"
-        >
-          {pages.map((key) => (
-            <Link
-              key={key.name}
-              to={key.link}
-              onClick={() => setIsOpen(false)}
-              className={`block px-4 py-2 rounded-md w-full text-center transition font-medium ${
-                isActive(key.link)
-                  ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                  : "text-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
-              }`}
-            >
-              {key.name}
-            </Link>
-          ))}
-
-          <button
-            className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition font-semibold"
-            onClick={handleAppointment}
-          >
-            Book Appointment
-          </button>
-
-          {/* <LanguageSelector /> */}
-        </div>
-      )}
     </nav>
   );
 }
