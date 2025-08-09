@@ -56,6 +56,8 @@ export default function Card(props) {
             </div>
           </div>
 
+          {/*
+
           <div className="pt-3 text-center">
             <Link
               to={`/interpreters/${nameSlug}`}
@@ -63,6 +65,7 @@ export default function Card(props) {
               <Button>Know More</Button>
             </Link>
           </div>
+          */}
         </div>
       </div>
     </div>
