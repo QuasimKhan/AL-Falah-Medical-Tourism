@@ -55,7 +55,7 @@ git clone https://github.com/yourusername/al-falah-medical-tourism.git
 cd al-falah-medical-tourism
 npm install
 npm run dev
-
+```
 ## Usage
 
 To use the AL-Falah Medical Tourism website:
