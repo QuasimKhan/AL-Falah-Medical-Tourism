@@ -16,7 +16,7 @@ export default function Doctors() {
         />
         <meta name="keywords" content="Doctors, Specialist Doctors, Medical Tourism, AL-Falah Medical Tourism, Healthcare Experts" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://alfalahmedicaltourism.in/doctors" />
+        <link rel="canonical" href="https://alfalahmedicaltourism.in/doctors" /> 
       </Helmet>
 
       {/* Header Section */}
