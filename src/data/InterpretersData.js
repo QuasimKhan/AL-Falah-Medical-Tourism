@@ -55,19 +55,5 @@ export const InterpretersData = [
         contact: "+91 9794094606",
         email: "quasimkhanpersonal@gmail.com",
     },
-    {
-        id: 5,
-        name: "Quasim Khan",
-        img: "/images/interpreters/quasim.jpg",
-        languages: ["Russian", "English", "Urdu", "Hindi"],
-        expertise: "Medical, Tourism",
-        experience: "1 year",
-        qualifications: "Certified Medical Interpreter",
-        designation: "Junior Interpreter",
-        nationality: "Indian",
-        bio: "Jane is a junior medical interpreter with a passion for helping patients navigate healthcare systems. She is fluent in English and French.",
-        contact: "+91 9794094606",
-        email: "quasimkhanpersonal@gmail.com",
-    },
     
 ]
