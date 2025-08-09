@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { DoctorsData } from "../data/doctorData";
 import NotFound from "../components/NotFound";
 import Button from "../components/Button";
@@ -70,9 +70,11 @@ const AboutDoctor = () => {
         </div>
 
         <div className="mt-8">
+          <Link to={"/appointment"}>
           <Button>
             Book Appointment
           </Button>
+            </Link>
         </div>
       </div>
     </div>
