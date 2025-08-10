@@ -41,6 +41,17 @@ const ContactPage = () => {
             Call Now
           </a>
         </div>
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition">
+          <FaPhoneAlt className="text-4xl text-blue-500 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-800">Phone</h3>
+          <p className="text-gray-600 mt-2">+917880987272</p>
+          <a
+            href="tel:+917880987272"
+            className="text-blue-600 hover:underline block mt-1"
+          >
+            Call Now
+          </a>
+        </div>
 
         <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition">
           <FaEnvelope className="text-4xl text-green-500 mx-auto mb-4" />
