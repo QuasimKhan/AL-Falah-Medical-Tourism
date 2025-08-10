@@ -56,13 +56,16 @@ export default function Card(props) {
             </div>
           </div>
 
+          
+
           <div className="pt-3 text-center">
             <Link
-              to={`/interpreters/${nameSlug}`}
+              to={`/appointment`}
             >
-              <Button>Know More</Button>
+              <Button>Book Now</Button>
             </Link>
           </div>
+          
         </div>
       </div>
     </div>
