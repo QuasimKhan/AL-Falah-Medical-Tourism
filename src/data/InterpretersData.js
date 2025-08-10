@@ -2,7 +2,7 @@ export const InterpretersData = [
     {
         id: 1,
         name: "Sarfaraz Ahmad",
-        img: "/images/interpreters/sarfaraz.jpg",
+        img: "/images/interpreters/sarfaraz.png",
         languages: ["Arabic", "English", "Urdu", "Hindi"],
         expertise: "Medical, Tourism",
         experience: "More than 17 years",
@@ -16,7 +16,7 @@ export const InterpretersData = [
     {
         id: 2,
         name: "Mohammad Abid",
-        img: "/images/interpreters/abid.jpg",
+        img: "/images/interpreters/abid.png",
         languages: ["Arabic", "English", "Urdu", "Hindi"],
         expertise: "Medical, Tourism",
         experience: "More than 17 years",
@@ -58,7 +58,7 @@ export const InterpretersData = [
     {
         id: 5,
         name: "Mohammad Mojahid Mirza",
-        // img: "/images/interpreters/muzakkir.jpg",
+        img: "/images/interpreters/mojahid.jpg",
         languages: ["Arabic", "English", "Urdu", "Hindi"],
         expertise: "Human Resources, Public Relations",
         experience: "More than 10 years",

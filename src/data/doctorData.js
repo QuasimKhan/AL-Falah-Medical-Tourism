@@ -103,7 +103,7 @@ Dr. Tyagi employs the latest techniques and technologies in neurosurgery to ensu
     img: "/images/doctors/dr-pushpendra-nath-renjen.png",
     qualifications: "MBBS, DM (Neuro) FRCP (Glas.), FRFCP (Edin), FRCP (Ireland).",
     specialization: "Neurosciences",
-    designation: "Neurosurgeon",
+    designation: "Neurologist",
     experience: "36+ Years experience",
     location: "New Delhi, India",
     hospital: "Apollo Hospital",
