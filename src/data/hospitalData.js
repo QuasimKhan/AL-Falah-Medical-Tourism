@@ -65,19 +65,8 @@ export const HospitalData = [
     image: "/images/hospitals/medantalogo.png",
     website: "",
   },
-  {
-    id: 7,
-    name: "AIIMS (All India Institute of Medical Sciences)",
-    location: "New Delhi",
-    specialties: ["General Medicine", "Surgery", "Pediatrics"],
-    contact: "",
-    about:
-      "AIIMS is a premier medical institution in India, providing high-quality healthcare services, research, and education in various medical fields.",
-    image: "/images/hospitals/aiims.png",
-    website: "https://www.aiims.edu",
-  },
     {
-        id: 8,
+        id: 7,
         name: "Shalby Hospital",
         location: "",
         specialties: ["Cardiology", "Orthopedics", "Neurology"],
