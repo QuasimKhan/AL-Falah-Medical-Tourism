@@ -12,6 +12,7 @@ import ServiceCard from "../components/cards/ServiceCard";
 import ServicesCarousel from "../components/ServicesCarousel";
 import HospitalLogoCarousel from "../components/HospitalCarousal";
 import { Helmet } from "react-helmet-async";
+import Button from "../components/Button";
 
 const Home = () => {
   const topThreeInterpreters = InterpretersData.slice(0, 3); // ✅ Only first 3
@@ -67,7 +68,7 @@ const Home = () => {
       </div>
      
       {/* Interpreters Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 bg-gradient-to-br from-cyan-100 to-orange-100 z-0 py-5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 bg-gradient-to-br from-cyan-100 to-cyan-100 z-0 py-5">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-800 text-center">
           Our Interpreters
         </h2>
@@ -83,9 +84,10 @@ const Home = () => {
         <div className="flex justify-center mt-6">
           <Link
             to="/interpreters"
-            className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
           >
+            <Button>
             View All Interpreters →
+            </Button>
           </Link>
         </div>
       </div>

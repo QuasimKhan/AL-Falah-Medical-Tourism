@@ -127,6 +127,33 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* About Director  */}
+      <section className="py-12 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 md:px-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            Meet Our Director
+          </h2>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            <img
+              src="/images/interpreters/sarfaraz.png"
+              alt="Director of AL-Falah Medical Tourism"
+              className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-4 md:mb-0"
+            />
+            <div className="max-w-2xl">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
+                Mr. Sarfaraz Ahmad
+              </h3>
+              <p className="mt-2 text-gray-600">
+                With over 20 years of experience in healthcare management,
+                Mr. Sarfaraz Ahmad leads AL-Falah Medical Tourism with a vision
+                to bridge the gap between patients and world-class medical
+                services. His dedication to patient care and ethical practices
+                sets AL-Falah Medical Tourism apart.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Call to Action */}
       <section className="bg-white py-12 text-center border-t border-gray-200">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">

@@ -71,8 +71,8 @@ export default function Navbar() {
                 to={key.link}
                 className={`px-4 py-2 rounded-md transition font-medium ${
                   isActive(key.link)
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                    : "hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
+                    ? "bg-gradient-to-r from-cyan-900 to-cyan-500 text-white"
+                    : "hover:bg-gradient-to-r hover:from-cyan-500 hover:to-cyan-500 hover:text-white"
                 }`}
               >
                 {key.name}
@@ -132,8 +132,8 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className={`block px-4 py-2 rounded-md w-full text-center transition font-medium ${
             isActive(key.link)
-              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-              : "text-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white"
+              ? "bg-gradient-to-r from-cyan-900 to-cyan-500 text-white"
+              : "text-gray-800 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-cyan-500 hover:text-white"
           }`}
         >
           {key.name}
@@ -141,7 +141,7 @@ export default function Navbar() {
       ))}
 
       <button
-        className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition font-semibold"
+        className="w-full bg-gradient-to-r from-cyan-900 to-cyan-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition font-semibold"
         onClick={handleAppointment}
       >
         Book Appointment

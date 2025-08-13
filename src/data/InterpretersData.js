@@ -6,6 +6,7 @@ export const InterpretersData = [
         languages: ["Arabic", "English", "Urdu", "Hindi"],
         expertise: "Medical, Tourism",
         experience: "More than 17 years",
+        role: "Director of Al-Falah Medical Tourism",
         qualifications: "Certified Medical Interpreter",
         designation: "Arabic Interpreter for Medical Treatment",
         nationality: "Indian",
