@@ -22,20 +22,20 @@ const Home = () => {
     <Helmet>
   <title>AL-Falah Medical Tourism | Your Global Partner in Medical Tourism</title>
 
-  <!-- English Meta Description -->
+  {/* <!-- English Meta Description --> */}
   <meta
     name="description"
     content="AL-Falah Medical Tourism connects patients from Iraq, Saudi Arabia, UAE, and Egypt to India’s best doctors, hospitals, and affordable treatment plans."
   />
 
-  <!-- Arabic Meta Description -->
+  {/* <!-- Arabic Meta Description --> */}
   <meta
     name="description"
     lang="ar"
     content="الفلاح للسياحة الطبية يربط المرضى من العراق والسعودية والإمارات ومصر بأفضل الأطباء والمستشفيات في الهند بأسعار مناسبة."
   />
 
-  <!-- Keywords in English + Arabic -->
+  {/* <!-- Keywords in English + Arabic --> */}
   <meta
     name="keywords"
     content="Medical Tourism India, India Hospitals, India Healthcare, Affordable Treatment India, Best Doctors India, Surgery in India, Visa Assistance India, علاج في الهند, سياحة طبية الهند, مستشفيات الهند, Healthcare Iraq to India, Healthcare Saudi to India, Healthcare UAE to India, Healthcare Egypt to India, Medical Visa India"
@@ -44,7 +44,7 @@ const Home = () => {
   <meta name="author" content="AL-Falah Medical Tourism" />
   <link rel="canonical" href="https://www.alfalahmedicaltourism.in/" />
 
-  <!-- Open Graph -->
+  {/* <!-- Open Graph --> */}
   <meta property="og:title" content="AL-Falah Medical Tourism" />
   <meta
     property="og:description"
@@ -53,7 +53,7 @@ const Home = () => {
   <meta property="og:url" content="https://www.alfalahmedicaltourism.in/" />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter -->
+  {/* <!-- Twitter --> */}
   <meta name="twitter:title" content="AL-Falah Medical Tourism" />
   <meta
     name="twitter:description"
