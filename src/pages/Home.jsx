@@ -20,30 +20,47 @@ const Home = () => {
   return (
     <>
     <Helmet>
-          <title>AL-Falah Medical Tourism | Your Global Partner in Medical Tourism.</title>
-          <meta
-            name="description"
-            content="AL-Falah Medical Tourism offers world-class medical services in India. Access top doctors, hospitals, interpreters, and personalized care."
-          />
-          <meta name="keywords" content="Medical Tourism, Hospitals in India, Medical Services, Healthcare, AL-Falah" />
-          <meta name="author" content="AL-Falah Medical Tourism" />
-          <link rel="canonical" href="https://www.alfalahmedicaltourism.in/" />
-          {/* Open Graph / Facebook */}
-          <meta property="og:title" content="AL-Falah Medical Tourism" />
-          <meta
-            property="og:description"
-            content="Get personalized and affordable healthcare with AL-Falah Medical Tourism. Your trusted partner in medical travel."
-          />
-          <meta property="og:url" content="https://www.alfalahmedicaltourism.in/" />
-          <meta property="og:type" content="website" />
-          {/* Twitter */}
-          <meta name="twitter:title" content="AL-Falah Medical Tourism" />
-          <meta
-            name="twitter:description"
-            content="Access top medical care in India with AL-Falah Medical Tourism. Trusted hospitals, interpreters, and excellent service."
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Helmet>
+  <title>AL-Falah Medical Tourism | Your Global Partner in Medical Tourism</title>
+
+  <!-- English Meta Description -->
+  <meta
+    name="description"
+    content="AL-Falah Medical Tourism connects patients from Iraq, Saudi Arabia, UAE, and Egypt to India’s best doctors, hospitals, and affordable treatment plans."
+  />
+
+  <!-- Arabic Meta Description -->
+  <meta
+    name="description"
+    lang="ar"
+    content="الفلاح للسياحة الطبية يربط المرضى من العراق والسعودية والإمارات ومصر بأفضل الأطباء والمستشفيات في الهند بأسعار مناسبة."
+  />
+
+  <!-- Keywords in English + Arabic -->
+  <meta
+    name="keywords"
+    content="Medical Tourism India, India Hospitals, India Healthcare, Affordable Treatment India, Best Doctors India, Surgery in India, Visa Assistance India, علاج في الهند, سياحة طبية الهند, مستشفيات الهند, Healthcare Iraq to India, Healthcare Saudi to India, Healthcare UAE to India, Healthcare Egypt to India, Medical Visa India"
+  />
+
+  <meta name="author" content="AL-Falah Medical Tourism" />
+  <link rel="canonical" href="https://www.alfalahmedicaltourism.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AL-Falah Medical Tourism" />
+  <meta
+    property="og:description"
+    content="Affordable, world-class medical care in India for patients from Iraq, Saudi Arabia, UAE, and Egypt."
+  />
+  <meta property="og:url" content="https://www.alfalahmedicaltourism.in/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:title" content="AL-Falah Medical Tourism" />
+  <meta
+    name="twitter:description"
+    content="Trusted medical tourism services in India — connecting patients from Iraq, Saudi Arabia, UAE, and Egypt to the best hospitals."
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
 
 
 
