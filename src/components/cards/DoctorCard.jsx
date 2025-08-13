@@ -13,7 +13,7 @@ export default function DoctorCard(props) {
           <img
             src={props.img || "/images/doctors/doctor-dummy.png"}
             alt={props.name}
-            className="w-auto h-full object-contain p-3"
+            className="w-auto h-full object-contain p-3 lazyload"
           />
         </div>
 
